@@ -1,7 +1,7 @@
-#×¢Òâ£ºÈç¹ûÔÚ¼ÇÊÂ±¾ÉÏ±àĞ´£¬ÏÂÃæµÄËõ½ø²»ÒªÊ¹ÓÃTabÀ´Ëõ½ø£¬²»È»±¨´í
+#æ³¨æ„ï¼šå¦‚æœåœ¨è®°äº‹æœ¬ä¸Šç¼–å†™ï¼Œä¸‹é¢çš„ç¼©è¿›ä¸è¦ä½¿ç”¨Tabæ¥ç¼©è¿›ï¼Œä¸ç„¶æŠ¥é”™
 spring:
   profiles:
-active: dev # ¼¤»î¿ª·¢»·¾³ÅäÖÃ
+active: dev # æ¿€æ´»å¼€å‘ç¯å¢ƒé…ç½®
 --- 
 server:
 port: 8001
@@ -10,14 +10,14 @@ mybatis:
   type-aliases-package: com.mengxuegu.springcloud.entities
   mapper-locations: classpath:mybatis/mapper/**/*.xml
 spring:
-  profiles: dev # ¿ª·¢»·¾³
+  profiles: dev # å¼€å‘ç¯å¢ƒ
   application:
-    name: microservice-product-config # ******·şÎñÃû*******
+    name: microservice-product-config # ******æœåŠ¡å*******
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/springcloud_db01?serverTimezone=GMT%2B8 #Êı
-¾İ¿âÁ¬½ÓµØÖ·£¬*****×¢Òâ¿âÃû db01***************
+    url: jdbc:mysql://127.0.0.1:3306/springcloud_db01?serverTimezone=GMT%2B8 #æ•°
+æ®åº“è¿æ¥åœ°å€ï¼Œ*****æ³¨æ„åº“å db01***************
     username: root
     password: root
     dbcp2:
@@ -32,8 +32,8 @@ eureka:
      serviceUrl:
        defaultZone: http://eureka6001.com:6001/eureka
    instance:  
-	 instanceId: ${spring.application.name}:${server.port}
-	 prefer-ip-address: true
+     instanceId: ${spring.application.name}:${server.port}
+     prefer-ip-address: true
 ---
 server:
   port: 8001
@@ -42,14 +42,14 @@ mybatis:
   type-aliases-package: com.mengxuegu.springcloud.entities
   mapper-locations: classpath:mybatis/mapper/**/*.xml
 spring:
-  profiles: prod # Éú²ú»·¾³
+  profiles: prod # ç”Ÿäº§ç¯å¢ƒ
   application:
-    name: microservice-product-config # ******·şÎñÃû*******
+    name: microservice-product-config # ******æœåŠ¡å*******
 datasource:
   type: com.alibaba.druid.pool.DruidDataSource
   driver-class-name: com.mysql.cj.jdbc.Driver
-  url: jdbc:mysql://127.0.0.1:3306/springcloud_db02?serverTimezone=GMT%2B8 #Êı
-¾İ¿âÁ¬½ÓµØÖ·£¬*****×¢Òâ¿âÃû db02***************
+  url: jdbc:mysql://127.0.0.1:3306/springcloud_db02?serverTimezone=GMT%2B8 #æ•°
+æ®åº“è¿æ¥åœ°å€ï¼Œ*****æ³¨æ„åº“å db02***************
   username: root
   password: root
   dbcp2:
